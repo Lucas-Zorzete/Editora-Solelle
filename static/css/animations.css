@@ -76,6 +76,8 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   border: 1px solid #e9c56a8a;
   box-shadow: var(--shadow-secondary);
   border-radius: 1rem;
