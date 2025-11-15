@@ -196,9 +196,12 @@ const modalPrice = document.getElementById("modalPrice");
 const modalBuy = document.getElementById("modalBuy");
 
 document.addEventListener("click", e => {
-    const card = e.target.closest(".card");
-    if (!card) return;
+    // verifica se clicou exatamente na capa
+    const cover = e.target.closest(".cover");
+    if (!cover) return;
 
+    // pega o card onde essa capa está
+    const card = cover.closest(".card");
     const title = card.dataset.title;
     const book = BOOKS.find(b => b.title === title);
 
@@ -215,6 +218,7 @@ document.addEventListener("click", e => {
         modal.style.display = "flex";
     }
 });
+
 
 closeModal.onclick = () => modal.style.display = "none";
 window.onclick = e => { if (e.target === modal) modal.style.display = "none"; }
