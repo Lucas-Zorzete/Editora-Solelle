@@ -4,7 +4,7 @@ const LAUNCHES = [
     title:'Check-In Mental', 
     author:'Gabrielle Côrrea', 
     genre:'Ficção Psicológica • Cura Emocional', 
-    cover:'../static/img/Check-In_Mental.jpg',
+    cover:'static/img/Check-In_Mental.jpg',
     margintop: 50,
     bio: "Na Residência Psique, um refúgio voltado à saúde mental, hóspedes enfrentam seus traumas e emoções profundas sob o olhar sensível de Luna, a recepcionista que narra histórias de dor, superação e empatia. Um retrato humano sobre reconstrução interior e o poder de ouvir e ser ouvido."
 },
@@ -13,7 +13,7 @@ const LAUNCHES = [
     title:'A Casa Onde Dormem as Mulheres', 
     author:'Thalita Monteiro', 
     genre:'Realismo Social • Feminilidade', 
-    cover:'../static/img/a_Casa_Onde_Dormem_as_Mulheres.jpg',
+    cover:'static/img/a_Casa_Onde_Dormem_as_Mulheres.jpg',
     bio: "Em A Casa Onde Dormem as Mulheres, vítimas de violências e perdas encontram refúgio para curar suas feridas e reencontrar a própria voz. A obra é um relato poético sobre dor, resistência, perdão e renascimento feminino."
 }
 ];
@@ -51,17 +51,17 @@ const RECOMMENDATIONS = [
 ];
 
 const ARTICLES = [
-  { img: "../static/img/artigo1.png", caption: "Para alguns, é só um caderno e uma caneta. Para outros, é o único jeito de manter a sanidade. 🖋✨" },
-  { img: "../static/img/artigo2.png", caption: "Nem toda escrita precisa de aplausos. Às vezes, é só a alma pedindo para respirar entre as linhas. 📝💛" },
-  { img: "../static/img/artigo3.png", caption: "✨ Quantas vezes você já imaginou segurar sua própria história impressa? Sentir o peso dos seus personagens, das suas palavras, do seu sonho realizado?" },
-  { img: "../static/img/artigo4.png", caption: "📝✨ Quando o coração fala mais alto que a razão… Essa é uma das declarações mais intensas da literatura, capaz de tocar até os sentimentos mais adormecidos 💛" },
-  { img: "../static/img/artigo5.png", caption: "Algumas perdas podem ser encontradas no tempo certo, outras, jamais deveriam ter sido deixadas para trás. Uma lembrança de sabedoria direto da Terra Média com Gandalf, o Cinzento. ✨" },
-  { img: "../static/img/artigo6.png", caption: "📚 Da nossa editora pra você, que escreve, sente, sonha e segue mesmo com frio na barriga. O show é seu. 💫" },
-  { img: "../static/img/artigo7.png", caption: "📚✨ A leitura é um refúgio, um encontro consigo mesmo e com o mundo. Infelizmente, nem todos descobrem esse prazer — mas quem descobre, nunca mais vive sem. 💛" },
-  { img: "../static/img/artigo8.png", caption: "💛 Setembro Amarelo também é momento de ler." },
-  { img: "../static/img/artigo9.png", caption: "⏳✨ Cada etapa importa, cada pausa também faz parte. Respeitar o processo é acreditar que o tempo trabalha a nosso favor. 🌻" },
-  { img: "../static/img/artigo10.png", caption: "Todo autor já começou com um rascunho duvidoso, um texto no bloco de notas ou um sonho guardado no peito. Aqui, a gente acredita em vozes novas." }, 
-  { img: "../static/img/artigo11.png", caption: "Leitura da semana: A Menina que Roubava Livros 💛 Um lembrete de que as palavras podem mudar destinos." }
+  { img: "static/img/artigo1.png", caption: "Para alguns, é só um caderno e uma caneta. Para outros, é o único jeito de manter a sanidade. 🖋✨" },
+  { img: "static/img/artigo2.png", caption: "Nem toda escrita precisa de aplausos. Às vezes, é só a alma pedindo para respirar entre as linhas. 📝💛" },
+  { img: "static/img/artigo3.png", caption: "✨ Quantas vezes você já imaginou segurar sua própria história impressa? Sentir o peso dos seus personagens, das suas palavras, do seu sonho realizado?" },
+  { img: "static/img/artigo4.png", caption: "📝✨ Quando o coração fala mais alto que a razão… Essa é uma das declarações mais intensas da literatura, capaz de tocar até os sentimentos mais adormecidos 💛" },
+  { img: "static/img/artigo5.png", caption: "Algumas perdas podem ser encontradas no tempo certo, outras, jamais deveriam ter sido deixadas para trás. Uma lembrança de sabedoria direto da Terra Média com Gandalf, o Cinzento. ✨" },
+  { img: "static/img/artigo6.png", caption: "📚 Da nossa editora pra você, que escreve, sente, sonha e segue mesmo com frio na barriga. O show é seu. 💫" },
+  { img: "static/img/artigo7.png", caption: "📚✨ A leitura é um refúgio, um encontro consigo mesmo e com o mundo. Infelizmente, nem todos descobrem esse prazer — mas quem descobre, nunca mais vive sem. 💛" },
+  { img: "static/img/artigo8.png", caption: "💛 Setembro Amarelo também é momento de ler." },
+  { img: "static/img/artigo9.png", caption: "⏳✨ Cada etapa importa, cada pausa também faz parte. Respeitar o processo é acreditar que o tempo trabalha a nosso favor. 🌻" },
+  { img: "static/img/artigo10.png", caption: "Todo autor já começou com um rascunho duvidoso, um texto no bloco de notas ou um sonho guardado no peito. Aqui, a gente acredita em vozes novas." }, 
+  { img: "static/img/artigo11.png", caption: "Leitura da semana: A Menina que Roubava Livros 💛 Um lembrete de que as palavras podem mudar destinos." }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {

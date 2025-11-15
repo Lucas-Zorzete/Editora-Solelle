@@ -7,7 +7,7 @@ const BOOKS = [
     author:'Gabrielle Côrrea',
     genre:'Poesias • Autobiografia • Literatura profunda',
     price:24.99,
-    cover:'../static/img/Fragmentos_de_Mim.jpg',
+    cover:'static/img/Fragmentos_de_Mim.jpg',
     sinopse: 'O livro Fragmentos de Mim reúne poemas que registram as emoções e descobertas de uma jovem de quinze anos enquanto ela tenta entender a si mesma. Cada texto funciona como um retrato de seus conflitos, afetos e inseguranças, revelando o amadurecimento emocional típico da adolescência. É uma obra que busca conexão com o leitor ao revisitar experiências e sentimentos comuns a essa fase da vida.'
   },
   {
@@ -17,7 +17,7 @@ const BOOKS = [
     author:'Thalita Monteiro',
     genre:'Memórias • Autobiografia',
     price:12.50,
-    cover:'../static/img/Onde_o_Tempo_faz_a_Curva.jpg',
+    cover:'static/img/Onde_o_Tempo_faz_a_Curva.jpg',
     sinopse: 'Este livro revela, de forma franca, a trajetória de quem cresceu entre traumas, instabilidade emocional e a luta diária contra a depressão. Entre relatos de autodestruição, confusão interna e solidão, também surgem momentos de resistência: amizades que seguraram a dor, o apoio imperfeito da mãe e a escrita como refúgio quando nada mais fazia sentido. Não é uma história de superação idealizada, mas um testemunho real de quem já se sentiu quebrado, exausto e sem saída — e ainda assim encontrou pequenos motivos para continuar.'
   }
 ];
@@ -26,24 +26,24 @@ const BOOKS = [
 const AUTHORS = [
   {
     name: 'Thalita Monteiro',
-    avatar: '../static/img/avatar_thalita.jpeg',
-    pet: '../static/img/Garfield_Solielle.png',
+    avatar: 'static/img/avatar_thalita.jpeg',
+    pet: 'static/img/Garfield_Solielle.png',
     width: 75,
     emoji: '🏵️',
     bio: 'O coração das palavras, que vive a escrita intensamente, trazendo emoção, drama e paixão pela literatura.<br><br> Ama escrever, se emociona com histórias e, na Solielle, cuida dos textos com carinho e respeito, para que as palavras cheguem a quem precisa lê-las.'
   },
   {
     name: 'Gabrielle Côrrea',
-    avatar: '../static/img/avatar_bibi.jpeg',
-    pet: '../static/img/Snoopy_Solielle.png',
+    avatar: 'static/img/avatar_bibi.jpeg',
+    pet: 'static/img/Snoopy_Solielle.png',
     width: 88,
     emoji: '🌸',
     bio: 'A criativa sensível que transforma sentimentos em imagens e formas com doçura e olhar artístico.<br><br> Ama criar em traços e palavras, encontrou na arte um refúgio e um jeito de dar voz ao que sente. Na Solielle, transforma emoções em criações que acolhem e inspiram.'
   },
   {
     name: 'Sofia Mendes',
-    avatar: '../static/img/avatar_sofia.jpeg',
-    pet: '../static/img/Pooh_Solielle.png',
+    avatar: 'static/img/avatar_sofia.jpeg',
+    pet: 'static/img/Pooh_Solielle.png',
     width: 65,
     emoji: '🌻',
     bio: 'A mente inquieta e comunicativa, cheia de ideias e estratégias para levar histórias mais longe.<br><br> Ama desenhar e escrever, encontrou na criação uma forma de se expressar e se sentir em paz. Cuida das palavras e ideias para que transmitam verdade e acolhimento.'
@@ -51,9 +51,9 @@ const AUTHORS = [
 ];
 
 const POSTS = [
-  {id: 1, title:'Lançamentos do mês', excerpt:'Confira os livros que chegam às prateleiras este mês.', cover:'../static/img/lançamentos.png'},
-  {id: 2, title:'Listas e recomendações dos autores', excerpt:'“3 motivos para continuar escrevendo”, “Como criar personagem marcante?”...', cover:'../static/img/recomendações.png'},
-  {id: 3, title:'Artigos que inspiram os autores', excerpt:'Confira as reflexões, curiosidades e textos curtos que estimulam os autores.', cover:'../static/img/artigos.png'}
+  {id: 1, title:'Lançamentos do mês', excerpt:'Confira os livros que chegam às prateleiras este mês.', cover:'static/img/lançamentos.png'},
+  {id: 2, title:'Listas e recomendações dos autores', excerpt:'“3 motivos para continuar escrevendo”, “Como criar personagem marcante?”...', cover:'static/img/recomendações.png'},
+  {id: 3, title:'Artigos que inspiram os autores', excerpt:'Confira as reflexões, curiosidades e textos curtos que estimulam os autores.', cover:'static/img/artigos.png'}
 ];
 
 // const searchInput = document.getElementById("search-input");
