@@ -475,11 +475,15 @@ section {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, filter 0.3s ease;
-    cursor: pointer;
 }
 .card .cover {
     aspect-ratio: 3/5;
     object-fit: cover;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.card .cover:hover {
+    filter: grayscale(0);
 }
 .card .body {
     padding: .9rem;
@@ -500,6 +504,28 @@ section {
   filter: blur(0) brightness(1);
   transform: scale(1.05);
   z-index: 10; 
+}
+.qty-control {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 10px;
+}
+
+.qty-btn {
+    background: #ddd;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.qty {
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .authors {

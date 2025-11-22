@@ -112,7 +112,7 @@ const renderBooks = (list) => {
     const price = parseFloat(b.price).toFixed(2).replace('.', ','); // garante decimais e vírgula
     return `
       <article class="card" data-title="${b.title}" data-author="${b.author}" data-genre="${b.genre}">
-        <img class="cover" src="${b.cover}" alt="Capa do livro ${b.title}" id="${b.link}">
+        <img class="cover" title="Saiba mais" src="${b.cover}" alt="Capa do livro ${b.title}" id="${b.link}">
         <div class="body">
           <h3>${b.title}</h3>
           <div class="meta">${b.author} • ${b.genre}</div>

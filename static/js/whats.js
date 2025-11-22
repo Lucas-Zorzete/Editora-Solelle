@@ -12,15 +12,18 @@
 // })
 
 function sendWhats(title, price) {
-    const phone = 5511948573463;
+  const phone = 5511948573463;
 
-    const text = `Olá! Me chamo (seu nome).\nVim pelo site da *Solielle* e gostaria de comprar o livro *${title}* por R$${price},00.\nPoderia me ajudar com a compra?`;
-    const msgFormated = encodeURIComponent(text);
-    
-    const url = `https://wa.me/${phone}/?text=${msgFormated}`;
-    
-    window.open(url, '_blank');
+  const formattedPrice = parseFloat(price).toFixed(2).replace('.', ',');
+
+  const text = `Olá! Me chamo (seu nome).\nVim pelo site da *Solielle* e gostaria de comprar o livro *${title}* por R$${formattedPrice}.\nPoderia me ajudar com a compra?`;
+
+  const msgFormated = encodeURIComponent(text);
+  const url = `https://wa.me/${phone}/?text=${msgFormated}`;
+  
+  window.open(url, '_blank');
 }
+
 
 function finalizePurchase() {
   if (cart.length === 0) {
@@ -29,15 +32,26 @@ function finalizePurchase() {
   }
 
   const phone = 5511948573463;
-  const total = cart.reduce((sum, b) => sum + b.price, 0);
-  const bookList = cart.map(b => `*${b.title}* — R$${b.price},00`).join('\n');
+
+  // total real
+  const total = cart.reduce((sum, b) => sum + b.price * b.quantity, 0);
+  const totalFormatted = total.toFixed(2).replace('.', ',');
+
+  // lista de itens com quantidades
+  const bookList = cart
+    .map(b => `*${b.title}* — ${b.quantity}x — R$${(b.price * b.quantity).toFixed(2).replace('.', ',')}`)
+    .join('\n');
 
   const text = 
-`Olá! Me chamo (seu nome) e vim pelo site da *Solielle*.\n
-Gostaria de finalizar minha compra com os seguintes livros:\n
-${bookList}\n
-*Total:* R$${total},00\n
-Poderiam me ajudar com o pagamento e envio?`;
+    `Olá! Me chamo (seu nome) e vim pelo site da *Solielle*.
+
+    Gostaria de finalizar minha compra com os seguintes livros:
+
+    ${bookList}
+
+    *Total:* R$${totalFormatted}
+
+    Poderiam me ajudar com o pagamento e envio?`;
 
   const msgFormated = encodeURIComponent(text);
   const link = `https://wa.me/${phone}?text=${msgFormated}`;

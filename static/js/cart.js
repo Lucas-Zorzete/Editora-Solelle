@@ -33,17 +33,25 @@ function updateCart() {
   cartItems.innerHTML = cart.map(item => `
     <li>
       <img src="${item.cover}" alt="${item.title}">
-      <div style="flex:1; margin-left:10px">
+      
+      <div style="flex: 1; margin-left: 10px">
         <strong>${item.title}</strong><br>
         <span>R$${item.price.toFixed(2)}</span>
       </div>
+
+      <div class="qty-control">
+          <button class="qty-btn" onclick="changeQuantity(${item.id}, -1)">−</button>
+          <span class="qty">${item.quantity}</span>
+          <button class="qty-btn" onclick="changeQuantity(${item.id}, 1)">+</button>
+      </div>
+
       <button class="remove-btn" onclick="removeFromCart(${item.id})">✕</button>
     </li>
   `).join('');
 
-  const total = cart.reduce((sum, i) => sum + i.price, 0);
+  const total = cart.reduce((sum, i) => sum + i.price * i.quantity, 0);
   cartTotal.textContent = `R$${total.toFixed(2).replace('.', ',')}`;
-  quantitySpan.textContent = cart.length || '';
+  quantitySpan.textContent = cart.length;
 }
 
 // Função para adicionar ao carrinho
@@ -51,24 +59,49 @@ function addToCart(id) {
   const book = BOOKS.find(b => b.id === id);
   if (!book) return;
 
-  // Garante que o preço seja numérico (caso venha como string)
+  // garante número
   book.price = parseFloat(book.price);
 
-  cart.push(book);
+  const existing = cart.find(i => i.id === id);
+
+  if (existing) {
+      existing.quantity++;
+  } else {
+      cart.push({ ...book, quantity: 1 });
+  }
+
   updateCart();
   updateCartQuantity(1);
   showToast(`${book.title} adicionado ao carrinho!`);
 }
 
+function changeQuantity(id, change) {
+  const item = cart.find(i => i.id === id);
+  if (!item) return;
+
+  item.quantity += change;
+
+  // Se chegar a zero, remove do carrinho
+  if (item.quantity <= 0) {
+      removeFromCart(id);
+      return;
+  }
+
+  updateCart(); 
+  updateCartQuantity(change);
+}
+
+
 // Função para remover
 function removeFromCart(id) {
-    const index = cart.findIndex(b => b.id === id);
-    if (index !== -1) {
-        cart.splice(index, 1);
-        
-        updateCartQuantity(-1);
-        updateCart();
-    }
+  const index = cart.findIndex(b => b.id === id);
+  if (index !== -1) {
+    const removedQty = cart[index].quantity;
+    cart.splice(index, 1);
+    
+    updateCartQuantity(-removedQty);
+    updateCart();
+  }
 }
 
 function showToast(message) {
